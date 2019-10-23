@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-TAG=mysql-migration-example:1
-NAME=migration-example
+TAG=mysql-seed-example:1
+NAME=seed-example
 
 {
     echo "Building custom mysql image" &&
@@ -13,7 +13,7 @@ NAME=migration-example
     sleep 10 &&
 
     echo "Executing test query" &&
-    docker exec ${NAME} mysql --user=demo --password=demoPassword migration -e "SELECT * FROM hello;"
+    docker exec ${NAME} mysql --user=demo --password=demoPassword database-with-seed -e "SELECT * FROM seeded_table;"
 }
 
 echo "Stopping mysql database"

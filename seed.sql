@@ -1,5 +1,5 @@
-CREATE TABLE hello (
+CREATE TABLE seeded_table (
     title VARCHAR(255) NOT NULL
 );
 
-INSERT INTO hello VALUES ('hello');
+INSERT INTO seeded_table VALUES ('hello');

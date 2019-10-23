@@ -6,7 +6,7 @@ echo "Waiting for mysql to be ready"
 sleep 15
 
 echo "Seeding database"
-mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} migration < /data/seed.sql
+mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} database-with-seed < /data/seed.sql
 echo "Seeding done"
 
 echo "Shutting down mysql database"
